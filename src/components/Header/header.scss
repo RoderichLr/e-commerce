@@ -1,0 +1,139 @@
+$gray-700: #ffffff;
+
+@mixin header-link ($hover: true) {
+    color: $gray-700;
+    text-decoration: none;
+    
+  
+
+    @if $hover {
+        &:hover{
+           
+            border: 1px solid rgb(38, 217, 184);
+            border-radius: 50px;
+        
+        }
+    }
+
+}
+
+
+.container-2{
+ 
+  vertical-align: middle;
+  white-space: nowrap;
+  position: relative;
+ 
+ 
+
+}
+.container-2 input#search{
+  
+  width: 50px;
+  height: 50px;
+  box-shadow: 3px 2px 5px 2px rgba(63, 66, 65, 0.992);
+  background-color: rgba(30, 73, 55, 0.999);
+  border: none;
+  font-size: 10pt;
+  float: left;
+  color: #262626;
+  padding-left: 35px;
+  -webkit-border-radius: 50px;
+  -moz-border-radius: 50px;
+  border-radius: 50px;
+  color: #fff;
+  padding-right: 15px;
+  -webkit-transition: width .4s ease;
+  -moz-transition: width .4s ease;
+  -ms-transition: width .4s ease;
+  -o-transition: width .4s ease;
+  transition: width .4s ease;
+}
+.container-2 input#search::-webkit-input-placeholder {
+   color: #ffffff;
+}
+ 
+.container-2 input#search:-moz-placeholder { /* Firefox 18- */
+   color: #ffffff;  
+}
+ 
+.container-2 input#search::-moz-placeholder {  /* Firefox 19+ */
+   color: #ffffff;  
+}
+ 
+.container-2 input#search:-ms-input-placeholder {  
+   color: #ffffff;  
+}
+.container-2 .icon{
+  position: absolute;
+  top: 50%;
+  margin-left: 17px;
+  margin-top: 14px;
+  z-index: 1;
+  color: #ffffff; 
+}
+.container-2 input#search:focus, .container-2 input#search:active{
+  outline:none;
+  
+}
+ 
+.container-2:hover input#search{
+width: 113px;
+background-color: rgb(32, 117, 81);
+
+color: #ffbf00; 
+}
+.container-2 input#search:focus, .container-2 input#search:active{
+  outline:none;
+  width: 300px;
+}
+ 
+ 
+.container-2:hover .icon{
+  color: #ffbf00; 
+
+}
+
+
+.header {
+   
+
+
+   
+    align-items: center;
+    padding-left: 10px;
+    padding-right: 10px;
+
+    box-shadow: 3px 2px 5px 2px rgba(4, 54, 44, 0.992);
+    background-color: rgba(24, 136, 89, 0.893);
+    display: flex;
+    justify-content: space-between;
+    
+    
+    
+    
+
+    &__logo {
+        @include header-link(false);
+     
+    }
+
+    &__nav-list {
+      
+    display: flex;
+        column-gap: 5px;
+        margin-top: 15px;
+        justify-content: center;
+        align-items: center;
+        height: 30px;
+        list-style: none;
+       
+       
+    }
+
+    &__item-link {
+        @include header-link;
+     padding: 7px;
+ 
+    }
+}
